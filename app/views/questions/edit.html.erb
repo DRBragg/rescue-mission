@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h1>Edit Question</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <%= bootstrap_form_for(@question) do |f| %>
+      <%= f.text_field :title, label: "Question Title:" %>
+      <%= f.text_area :description, label: "Question Body:" %>
+      <%= f.submit "Edit", class: "btn btn-primary" %>
+      <%= button_to 'Delete', { action: "destroy" }, { method: :delete, class: "btn btn-danger" } %>
+    <% end %>
+  </div>
+</div>

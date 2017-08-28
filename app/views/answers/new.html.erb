@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h1>New Answer</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Question: <%= @question.title %></h3>
+      </div>
+      <div class="panel-body">
+        <%= bootstrap_form_for [@question, @answer] do |f| %>
+          <%= f.text_area :description, label: "Answer:" %>
+          <%= f.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
