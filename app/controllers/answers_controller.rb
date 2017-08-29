@@ -10,10 +10,10 @@ class AnswersController < ApplicationController
     @answer.question = @question
 
     if @answer.save
-      flash[:notice] = "Answer saved successfully."
+      flash[:success] = "Answer saved successfully."
       redirect_to question_path(@question)
     else
-      flash[:alert] = "Failed to save answer."
+      flash[:warning] = "Failed to save answer."
       render :new
     end
   end

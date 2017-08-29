@@ -15,10 +15,10 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
 
     if @question.save
-      flash[:notice] = 'Added new Question.'
+      flash[:success] = 'Added new Question.'
       redirect_to @question
     else
-      flash[:alert] = 'Error saving question.'
+      flash[:danger] = 'Error saving question.'
       render :new
     end
   end
@@ -31,10 +31,10 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
 
     if @question.update(question_params)
-      flash[:notice] = 'Question updated.'
+      flash[:success] = 'Question updated.'
       redirect_to @question
     else
-      flash[:alert] = 'Error saving question.'
+      flash[:danger] = 'Error updating question.'
       redirect_to edit_question_path
     end
   end
@@ -44,7 +44,7 @@ class QuestionsController < ApplicationController
 
     question.destroy
 
-    flash[:notice] = 'Question deleted.'
+    flash[:warning] = 'Question deleted.'
     redirect_to questions_path
   end
 
