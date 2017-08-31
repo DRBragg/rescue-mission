@@ -1,0 +1,43 @@
+<container class="header">
+  <row>
+    <columns>
+      <h1 class="text-center">There's a new answer!</h1>
+
+      <center>
+        <menu class="text-center">
+          <item href="#">View Questions</item>
+          <item href="#">View your Question</item>
+        </menu>
+      </center>
+
+    </columns>
+  </row>
+</container>
+
+<container class="body-border">
+  <row>
+    <columns>
+
+      <spacer size="32"></spacer>
+
+      <center>
+        <img src="http://placehold.it/200x200">
+      </center>
+
+      <spacer size="16"></spacer>
+
+      <h4><%= @question.title %></h4>
+      <p><%= @answer %></p>
+
+      <center>
+        <menu>
+          <item href="#">Rescue Mission</item>
+          <item href="#">Submit a new question</item>
+        </menu>
+      </center>
+
+    </columns>
+  </row>
+
+  <spacer size="16"></spacer>
+</container>

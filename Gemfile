@@ -24,6 +24,12 @@ gem 'coffee-rails', '~> 4.2'
 # bootstrap forms gem
 gem 'bootstrap_form'
 
+#foundation for emails
+gem 'inky-rb', require: 'inky'
+# Stylesheet inlining for email
+gem 'premailer-rails'
+gem 'nokogiri'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
